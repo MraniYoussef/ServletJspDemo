@@ -2,6 +2,26 @@
  "-//Sun Microsystems, Inc.//DTD Web Application 2.3//EN"
  "http://java.sun.com/dtd/web-app_2_3.dtd" >
 <web-app >
+	<filter>
+		<filter-name>FilterGetAlien</filter-name>
+		<display-name>FilterGetAlien</display-name>
+		<description></description>
+		<filter-class>com.sqli.web.filter.FilterGetAlien</filter-class>
+	</filter>
+	<filter>
+		<filter-name>FilterLoginAlien</filter-name>
+		<display-name>FilterLoginAlien</display-name>
+		<description></description>
+		<filter-class>com.sqli.web.filter.FilterLoginAlien</filter-class>
+	</filter>
+	<filter-mapping>
+		<filter-name>FilterGetAlien</filter-name>
+		<url-pattern>/getAlien</url-pattern>
+	</filter-mapping>
+	<filter-mapping>
+		<filter-name>FilterLoginAlien</filter-name>
+		<url-pattern>/login</url-pattern>
+	</filter-mapping>
 
 <servlet>
     	<servlet-name>GetAlienController</servlet-name>
