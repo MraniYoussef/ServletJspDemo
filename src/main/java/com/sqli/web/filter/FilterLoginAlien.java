@@ -23,7 +23,7 @@ public class FilterLoginAlien implements Filter {
 	public void doFilter(ServletRequest request, ServletResponse response, FilterChain chain) throws IOException, ServletException {
 		
 		PrintWriter out = response.getWriter();
-		HttpServletRequest req = (HttpServletRequest) request;
+		HttpServletRequest req = (HttpServletRequest) request;	
 		
 		String uname= request.getParameter("uname");
 		String pass = request.getParameter("pass");
@@ -36,12 +36,7 @@ public class FilterLoginAlien implements Filter {
 			out.println(" Invalid input");
 			
 		
-		if (Integer.parseInt(pass)>1)
-			
-			chain.doFilter(request, response);
-			
-			else 
-				out.println(" Invalid input");
+		
 				
 			
 	}
